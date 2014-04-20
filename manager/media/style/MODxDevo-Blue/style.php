@@ -4,9 +4,9 @@
  * Function:       Manager style variables for images and icons.
  * Encoding:       UTF-8
  * Credit:         icons by FamFamFam http://www.famfamfam.com/lab/icons/  and by Oxygen Icons http://www.oxygen-icons.org/
- * Date:           29-Mar-2013
- * Version:        1.0
- * MODx version:   1.0.9
+ * Date:           20-Apr-2014
+ * Version:        2.0
+ * MODx version:   1.0.13
 */
 $style_path = 'media/style/' . $modx->config['manager_theme'] . '/images/';
 
