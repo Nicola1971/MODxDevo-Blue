@@ -1049,7 +1049,7 @@ text-shadow:1px 1px 1px #330000}
 #nav li.active ul.subnav li{
 margin:0; 
 border:0; 
-border-right:1px solid #155ca0}
+}
 
 #nav li.active ul.subnav a:hover{
 color:#fff}
@@ -1156,6 +1156,7 @@ font-size:120%}
 .rtl .settings th{text-align:right}
 .filelist td{
 border-bottom:1px solid #C2C3CF}
+
 /* -------------------------[ Tabs ]--- */
 .dynamic-tab-pane-control.tab-pane{
 position:relative; 
@@ -1179,7 +1180,6 @@ position:relative;
 top:0; 
 border:1px solid #c6c6c6; 
 background:#ffffff; 
-background:linear-gradient(to bottom,#ffffff 0%,#e5e5e5 100%); 
 border-radius:4px 4px 0 0; 
 -moz-border-radius:4px 4px 0 0; 
 -webkit-border-radius:4px 4px 0 0}
@@ -1191,7 +1191,7 @@ border-radius:4px 4px 0 0;
 .dynamic-tab-pane-control .tab-row .tab.hover{
 background:#f9f9f9; 
 text-decoration:none; 
-border-color:#8dc144 #c6c6c6 #FFFFFF #c6c6c6; 
+border-color:#499bea #c6c6c6 #FFFFFF #c6c6c6; 
 border-width:1px; 
 top:-4px; 
 z-index:3; 
@@ -1215,7 +1215,7 @@ box-shadow:0 6px 0 -1px #f9f9f9,0 1px 6px rgba(0,0,0,0.1)}
 top:-4px; 
 z-index:999}
 .dynamic-tab-pane-control .tab-row .tab.selected span{
-color:#0570b7; 
+color:#499bea; 
 top:-4px; 
 z-index:999}
 .dynamic-tab-pane-control .tab-row .tab span{
@@ -1734,7 +1734,7 @@ optgroup{font-style:normal}
 
 #mainpane table th{vertical-align:top}
 
-/* dashboard stuff */
+/* Dashboard styles */
 .dashboard h1:before{
     content:'\f108';
     font-family: FontAwesome;
@@ -1744,14 +1744,18 @@ optgroup{font-style:normal}
     color: #499bea;
     padding: 0 5px 0 5px;
 }
- img.expandbuttn 
+.sectionHeader a i.expandbuttn 
 {
- float:right}
+display: block;
+ float:right;
+ color: #FFFFFF;
+ font-size:14px;
+ padding-top:4px;}
 .dashrow {
 	clear:both;
 }
-.dashboard-block-half{float:left; width:48%}
-.dashboard-block-full{ width:96%; height:auto; clear:both}
+.dashboard-block-half{float:left; width:50%}
+.dashboard-block-full{ width:100%; height:auto; clear:both}
 .dashboard-block-content em{font-style:italic}
 .dashboard-block-content strong{font-weight:bold}
 .dashboard-block-content ul li a{
@@ -1763,7 +1767,7 @@ display:inline;
  padding-left:0}
 .dashboard-block-content{
  max-height:300px; 
- overflow:scroll; 
+overflow: auto;
  padding:10px; 
  height:auto; 
  color:#444; 
@@ -1799,7 +1803,7 @@ padding-left:0px;
 color: #499bea;
 margin:3px 8px 8px 0px;
 }
-.dashboard-block-full div.sectionBody a i
+.dashboard-block-full div.sectionBody a i, .dashboard-block-half div.sectionBody a i
 {
 padding-left:10px;
 color: #499bea;
@@ -1827,8 +1831,27 @@ border-radius:3px;
 	font-weight:bold;
 	color: #333333;
 }
+.dashSeparator {
+display:block;
+float:left;
+width: 100%;
+clear: both;
+height:24px;
+border-bottom:2px solid #f1f1f1;
+padding:3px 25px;
+margin: 3px 0 4px 0;
+color: #d7d7d7;
+text-align:left;
+}
+
+.green2 {color: #6dbe3e!important;}
+.red2 {color: #ea4848!important;}
+.blueberry {color: #466baf!important;}
+
 .wm_button.green a i{color: #aece4e!important;}
+.wm_button.green2 a i{color: #6dbe3e!important;}
 .wm_button.red a i{color: #e77755!important;}
+.wm_button.red2 a i{color: #ea4848!important;}
 .wm_button.azure a i{color: #a5c8e5!important;}
 .wm_button.grey a i{color: #aaaaaa!important;}
 .wm_button.yellow a i{color: #f4c84f!important;}
@@ -1836,9 +1859,14 @@ border-radius:3px;
 .wm_button.white a i{color: #ffffff!important;}
 .wm_button.black a i{color: #333333!important;}
 .wm_button.pink a i{color: #ff7997!important;}
+.wm_button.blueberry a i{color: #466baf!important;}
+.wm_button.purplewine a i{color: #b94b6f!important;}
+.wm_button.orange a i{color: #FF9900!important;}
 
 .green a.hometblink img{background: #aece4e;}
+.green2 a.hometblink img{background: #6dbe3e;}
 .red a.hometblink img{background: #e77755;}
+.red2 a.hometblink img{background: #ea4848;}
 .azure a.hometblink img{background: #a5c8e5;}
 .grey a.hometblink img{background: #aaaaaa;}
 .yellow a.hometblink img{background: #f4c84f;}
@@ -1846,26 +1874,80 @@ border-radius:3px;
 .white a.hometblink img{background: #ffffff;}
 .black a.hometblink img{background: #333333;}
 .pink a.hometblink img{background: #ff7997;}
+.blueberry a.hometblink img{background: #466baf;}
+.purplewine a.hometblink img{background: #b94b6f;}
+.orange a.hometblink img{background: #FF9900;}
+/* fix*/
+.sectionHeader a i.expandbuttn{font-size:17px;}
+#nav li.active ul.subnav a{color:#fff;}
+#treeMenu a.treeButtonDisabled:hover{color:#fff;}
+.sectionHeader {box-shadow: 0 0px 0 #fff inset;}
+.actionButtons select#stay{margin: -4px 0 0;}
+.dynamic-tab-pane-control .tab-row .tab {padding-top:0;}
+#which_editor{margin:5px 0 0;}
+.tab-pane ul li ul li{margin: 0 0 2px 2px;}
+#tabCategory ul li ul li {margin: 1px 0;}
+.tab-pane ul li strong{border:0;}
 
- /*--overwrite doc manager styles
-.noChildren, .hasChildren{
-width:100%
-background:#ffffff; 
-border:1px solid #c6c6c6; 
--webkit-border-radius:4px; 
--moz-border-radius:4px; 
-border-radius:4px; 
--webkit-background-clip:padding; 
--moz-background-clip:padding; 
-background-clip:padding-box}
+/*fix and overwrite Package Manager Module styles*/
 
-li.noChildren,  li.hasChildren{
-background-repeat:no-repeat; 
-background-position: left center; 
-padding:6px 0 4px 17px; 
-margin:2px 0 3px 0px}
-li.sort{
-color:#444; 
-width:100%
- }
---*/
+a.button.deleteExtra img, .package a.button img
+{display: none;}
+.button {
+color: #fff!important;
+font-weight:bold; 
+font-size:13px; 
+padding:5px 9px!important; 
+white-space:nowrap; 
+vertical-align:top; 
+text-decoration:none; 
+outline:none; 
+border-radius:3px; 
+-webkit-border-radius:3px; 
+-moz-border-radius:3px; 
+background: #6dbe3e!important;
+background-image: none!important;
+
+}
+.deleteExtra {
+ background: #ea4848!important;
+ border: 1px solid #bf1616!important;
+}
+#tabpanel-packages H2:before, #tabpanel-local H2:before{
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    font-size:24px;
+    padding: 0 5px 0 5px;
+    color: #f4c84f!important;}
+#tabpanel-packages H2:before{
+    content:'\f187';}
+#tabpanel-packages H3:before, #tabpanel-local H3:before{
+    content:'\f187';
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    font-size:14px;
+    padding: 9px 7px 0 0;
+    color: #f4c84f!important;}
+#tabpanel-local H2:before{
+    content:'\f07c';}
+h2#tabs-packages:before, h2#tabs-local.tab:before{
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    font-size:14px;
+    padding: 9px 5px 0 0;
+    margin-left:-8px;
+    color: #f4c84f!important;}
+h2#tabs-packages:before{
+    content:'\f187';}
+h2#tabs-local.tab:before{
+    content:'\f07c';}
+    
+#searchPagination a, #searchPagination span {
+padding:6px 8px;
+background-color: #FFF;
+border: 1px solid #ddd;
+}
+
