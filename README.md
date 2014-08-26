@@ -2,6 +2,7 @@ MODxDevo-Blue
 =============
 
 Manager Theme for MODX Evolution
+http://www.tattoocms.it/manager-templates/devo-blue-evolution-manager-theme.html
 
 #Updates
 
